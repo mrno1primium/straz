@@ -13,7 +13,7 @@ if 'DYNO' in environ:
 else:
     ON_HEROKU = False
 BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0'))
-FQDN = str(getenv('FQDN', BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN','lazy-gangster-baby-lazydeveloperr.koyeb.app') else APP_NAME+'.herokuapp.com'
+FQDN = str(getenv('FQDN', BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN','thundering-marthena-notorgcall-54c2c900.koyeb.app') else APP_NAME+'.herokuapp.com'
 URL = "https://{}/".format(FQDN) if ON_HEROKU or NO_PORT else \
     "http://{}:{}/".format(FQDN, PORT)
 SLEEP_THRESHOLD = int(environ.get('SLEEP_THRESHOLD', '60'))
@@ -40,7 +40,7 @@ class Config(object):
 	API_HASH = os.environ.get("API_HASH", "2a8a470278d3e9c9562dfc75122ec35f")
 	BOT_TOKEN = os.environ.get("BOT_TOKEN","7124373883:AAH96udQsEb6CfEIhPaGXoxPL-icCj7GyVo")
 	BOT_USERNAME = os.environ.get("BOT_USERNAME" , "Flstbt_bot")
-	DB_CHANNEL = int(os.environ.get("DB_CHANNEL", -1002219937738))
+	DB_CHANNEL = int(os.environ.get("DB_CHANNEL", "-1002219937738"))
 	BOT_OWNER = int(os.environ.get("BOT_OWNER", "5269080448"))
 	DATABASE_URL = os.environ.get("DATABASE_URL","mongodb+srv://givav60658:rAf7gAE7EjinJIPq@cluster2.bg9mpif.mongodb.net/?retryWrites=true&w=majority&appName=Cluster2")
 	UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "-1002228761964")
@@ -57,8 +57,8 @@ class Config(object):
 	LP_CUSTOM_TEMPLATE= os.environ.get("LP_CUSTOM_TEMPLATE")
   # LP_CUSTOM_TEMPLATE= os.environ.get("LP_CUSTOM_TEMPLATE","{file_name} - example \n\n Please Upadate this template acording to you @LazyDeveloperr ")
 	BANNED_CHAT_IDS = list(set(int(x) for x in os.environ.get("BANNED_CHAT_IDS", "-1001362659779 -1001255795497").split()))
-	OTHER_USERS_CAN_SAVE_FILE = bool(os.environ.get("OTHER_USERS_CAN_SAVE_FILE", True))
-	AUTO_DELETE_TIME = int(os.environ.get('AUTO_DELETE_TIME', 20))
+	OTHER_USERS_CAN_SAVE_FILE = bool(os.environ.get("OTHER_USERS_CAN_SAVE_FILE", False))
+	AUTO_DELETE_TIME = int(os.environ.get('AUTO_DELETE_TIME', 30))
 
 	ABOUT_BOT_TEXT = f"""
 ᴛʜɪꜱ ɪꜱ ᴘᴇʀᴍᴀɴᴇɴᴛ ꜰɪʟᴇꜱ ꜱᴛᴏʀᴇ ʙᴏᴛ!
